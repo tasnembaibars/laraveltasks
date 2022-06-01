@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\InfosController;
+use App\Http\Controllers\user_control;
+use App\Models\users;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('task1');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/regester',[InfosController::class,'getdata']);
+Route::get('/user',[InfosController::class,'getid']);
+
 
